@@ -1,9 +1,8 @@
 class Door {
-    lenght!: number;
-    width!: number;
-    color!: string;
-    handle!: string;
-
+    private  lenght!: number;
+    private width!: number;
+    private  color!: string;
+    private  handle!: string;
     private isDoorOpened: boolean
 
 
@@ -14,12 +13,15 @@ class Door {
     setLenght(lenght: number): void {
         this.lenght = lenght;
     }
+
     setWidth(width: number): void {
         this.width = width;
     }
+
     setcolor(color: string): void {
         this.color = color;
     }
+
     sethandle(handle: string): void {
         this.handle = handle;
     }

@@ -20,6 +20,7 @@
     "incremental": true,
     "skipLibCheck": true,
     "importsNotUsedAsValues": "error",
+    "esModuleInterop":true,
     "inlineSourceMap": false,
     "noEmit": false
   }

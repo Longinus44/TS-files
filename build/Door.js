@@ -29,7 +29,6 @@ myDoor.setLenght(25);
 myDoor.setWidth(20);
 myDoor.setcolor('brown');
 myDoor.sethandle('silver');
-
 if (myDoor.open()) {
     console.log("door is open");
 }
