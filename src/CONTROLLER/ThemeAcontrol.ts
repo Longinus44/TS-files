@@ -2,8 +2,12 @@
 class ThemeAcontrol {
     defaultMethod() {
         return {
-            text: 'you ve reached the ${this.constructor.name} default method'
+            text: `you ve reached the ${this.constructor.name} default method`
         }
     }
 }
-export = new ThemeAcontrol();
+export default new ThemeAcontrol();
+
+export function defaultMethod(): any {
+    throw new Error("Function not implemented.");
+}
