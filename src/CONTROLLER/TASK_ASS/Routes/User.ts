@@ -2,11 +2,18 @@ import type { Express, Request, Response } from "express";
 import { v4 as uuidv4 } from 'uuid';
 import bodyParser from "body-parser";
 import express from "express";
-import { request } from "https";
+
 
 const Route = express.Router()
 
-const users: object[] = [{
+type IUser = {
+    id?: string;
+    firstname: string;
+    lastname: string;
+    age: number
+}
+
+let users: IUser[] = [{
     firstname: 'john',
     lastname: 'wick',
     age: 22
@@ -33,7 +40,12 @@ Route.get("/get_user/:id", (req: Request, res: Response) => {
 });
 
 Route.post("/", (req: Request, res: Response) => {
-    users.push(newUser);
+
+    const userObjects = users.map(user => {
+        user.id = uuidv4();
+        console.log(users);
+        console.log(userObjects);
+    });
     res.send(users);
 });
 
